@@ -1,0 +1,4 @@
+# 本 bundle 的层：只插入一个宿主侧插件行。
+- insert:
+    - id: plugin-doctor
+      name: 'dsh-plugin-doctor'
