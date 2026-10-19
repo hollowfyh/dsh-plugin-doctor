@@ -1,0 +1,50 @@
+{
+  "name": "dsh-plugin-doctor",
+  "version": "0.1.0",
+  "description": "Self-healing plugin doctor for DeepSeek Harness: detects failed plugin rows, disables them automatically with a patch backup, and reports diagnostics via /doctor.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "doctor",
+    "conflict",
+    "diagnostics"
+  ],
+  "license": "MIT",
+  "author": "hollowfyh",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hollowfyh/dsh-plugin-doctor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hollowfyh/dsh-plugin-doctor/issues"
+  },
+  "homepage": "https://github.com/hollowfyh/dsh-plugin-doctor#readme",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node test/smoke.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "compatibility": {
+      "dshReleases": {
+        "0.2.1-rc.2": "compatible"
+      }
+    }
+  }
+}
